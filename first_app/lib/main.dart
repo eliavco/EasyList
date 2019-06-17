@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
         accentColor: blueColorCustom,
 
         // Fonts
-
+        fontFamily: 'Google'
 
       ),
 
