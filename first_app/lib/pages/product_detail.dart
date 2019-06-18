@@ -30,13 +30,13 @@ class ProductPage extends StatelessWidget{
       Container(child: RaisedButton(
 
         // Button Text
-        child: Text('BACK'),
+        child: Text('DELETE'),
 
         // Button Color
         color: Theme.of(context).accentColor,
 
         // Button Action
-        onPressed: () => Navigator.pop(context),
+        onPressed: () => Navigator.pop(context, true),
 
         // padding for button
       ), padding: EdgeInsets.all(10.0),),
@@ -49,7 +49,7 @@ class ProductPage extends StatelessWidget{
   Widget build(BuildContext context) {
 
     // Product Detail Page
-    return Scaffold(
+    return WillPopScope(child: Scaffold(
 
       // App Bar for Product Detail Page
       appBar: AppBar(
@@ -62,6 +62,14 @@ class ProductPage extends StatelessWidget{
       // Main Content
       body: bodyPage(context, title, imageUrl),
 
+    ),
+    
+    // Handling back button
+    onWillPop: () {
+      // You can do things here before going back and if you dont add one of the following lines, you will not get back... but not both otherwise it will pop out of the root page and show a half black screen
+      Navigator.pop(context, false);
+      // return Future.value(false);
+    },
     );
 
   }

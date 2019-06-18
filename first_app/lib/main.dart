@@ -7,6 +7,9 @@ import 'package:flutter/material.dart';
 // Color File
 import './tools/colors.dart';
 
+// Auth page Import 
+import './pages/auth.dart';
+
 // Home Page Import
 import './pages/home.dart';
 
@@ -46,8 +49,12 @@ class MyApp extends StatelessWidget {
 
       ),
 
-      // Home Page
-      home: HomePage(),
+      // Auth Page
+      home: AuthPage(),
+
+      routes: {
+        '/home': (BuildContext context) => HomePage()
+      },
     );
   }
 

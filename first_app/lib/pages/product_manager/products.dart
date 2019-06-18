@@ -19,7 +19,8 @@ class Products extends StatelessWidget {
   
   // Products list data set up
   final List<Map> products;
-  Products([this.products = const []]);
+  final Function deleteProduct;
+  Products(this.products, {this.deleteProduct});
 
   // Indiviual Item
   Widget _buildProductItem(context, index){
@@ -54,7 +55,19 @@ class Products extends StatelessWidget {
               color: Colors.white30,
 
               // Details button action
-              onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ProductPage(products[index]['title'], products[index]['imageUrl'])))
+              onPressed: () => Navigator.push<bool>(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => ProductPage(
+                    products[index]['title'], products[index]['imageUrl']
+                  )
+                )
+              ).then((bool value){
+                if(value){
+                  deleteProduct(index);
+                }
+              })
+
             ),
 
           ],

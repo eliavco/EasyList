@@ -10,6 +10,30 @@ class HomePage extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
 
+      // Side drawer
+      drawer: Drawer(child: Column(children: <Widget>[
+        
+        // Drawer upper bar
+        AppBar(
+
+          // Hide hamburger when opened
+          automaticallyImplyLeading: false,
+
+          // Drawer title
+          title: Text('Menu'),
+          
+        ),
+
+        // Drawer links
+        ListTile(
+          title: Text('Manage Products'),
+          onTap: () {
+            
+          },
+        )
+
+      ],),),
+
       // Upper bar
       appBar: AppBar(
         title: Text('EasyList'),

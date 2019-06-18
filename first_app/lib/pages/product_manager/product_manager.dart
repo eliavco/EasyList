@@ -48,6 +48,10 @@ class _ProductManagerState extends State<ProductManager> {
     setState(() =>  _products.add(product));
   }
 
+  void _deleteProduct(int index){
+    setState(() => _products.removeAt(index));
+  }
+
   // products page builder
   @override
   Widget build(BuildContext context) {
@@ -67,7 +71,7 @@ class _ProductManagerState extends State<ProductManager> {
     ),
 
     // Products list
-    Expanded(child: SizedBox(height: 500.0, child: Products(_products),),),
+    Expanded(child: SizedBox(height: 500.0, child: Products(_products, deleteProduct: _deleteProduct),),),
 
     ],);
   }
