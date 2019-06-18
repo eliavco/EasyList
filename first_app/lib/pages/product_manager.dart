@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 
 // Importing Cards Maker and button 
-import './products.dart';
-import './product_control.dart';
+import './product_manager/products.dart';
+import './product_manager/product_control.dart';
 
 // products list state
 class ProductManager extends StatefulWidget {

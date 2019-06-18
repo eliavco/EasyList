@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import './tools/colors.dart';
 
 // Product Manager
-import './product_manager.dart';
+import './pages/product_manager.dart';
 
 void main() {
 
