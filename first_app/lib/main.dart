@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 // Color File
 import './tools/colors.dart';
 
-// Product Manager
-import './pages/product_manager.dart';
+// Home Page Import
+import './pages/home.dart';
 
 void main() {
 
@@ -47,17 +47,7 @@ class MyApp extends StatelessWidget {
       ),
 
       // Home Page
-      home: Scaffold(
-
-        // Upper bar
-        appBar: AppBar(
-          title: Text('EasyList'),
-        ),
-
-        // Page Content
-        body: ListView(children: [ProductManager(startingProduct: 'Food Tester')]),
-        
-      ),
+      home: HomePage(),
     );
   }
 

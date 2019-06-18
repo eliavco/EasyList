@@ -19,7 +19,7 @@ class ProductControl extends StatelessWidget {
       color: Theme.of(context).accentColor,
 
       // Function
-      onPressed: addProduct,
+      onPressed: () => addProduct({'title': 'Choocolate', 'imageUrl': 'assets/food.jpg'}),
 
       // Content
       child: Text('Add Item'),
