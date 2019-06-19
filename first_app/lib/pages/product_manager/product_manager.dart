@@ -6,8 +6,9 @@ import './products.dart';
 import './product_control.dart';
 
 // products list state
-class ProductManager extends StatefulWidget {
- 
+class ProductManager extends StatelessWidget {
+
+/* Deleted when state lifted and widget turned into stateless 
   // products data set up
   final Map startingProduct;
   ProductManager({this.startingProduct});
@@ -41,16 +42,13 @@ class _ProductManagerState extends State<ProductManager> {
     super.didUpdateWidget(oldWidget);
   }
 
-  // product add function to be provided to the cards builder
-  void addProduct(Map product){
+*/
 
-    // State updating and rerendering - adding a new product to the products list data
-    setState(() =>  _products.add(product));
-  }
-
-  void _deleteProduct(int index){
-    setState(() => _products.removeAt(index));
-  }
+  // Setting Up Important data
+  final List<Map> products;
+  final Function addProduct;
+  final Function deleteProduct;
+  ProductManager(this.products, this.addProduct, this.deleteProduct);
 
   // products page builder
   @override
@@ -71,7 +69,7 @@ class _ProductManagerState extends State<ProductManager> {
     ),
 
     // Products list
-    Expanded(child: SizedBox(height: 500.0, child: Products(_products, deleteProduct: _deleteProduct),),),
+    Expanded(child: SizedBox(height: 500.0, child: Products(products, deleteProduct: deleteProduct,),),),
 
     ],);
   }

@@ -24,10 +24,18 @@ class AuthPage extends StatelessWidget {
 
         // Basic login button
         child: RaisedButton(
+
+          // Login Button Color
+            // color: Theme.of(context).accentColor,
+
+          // Login Button Text
           child: Text('Login'),
+
+          // Login Button Action
           onPressed: () {
             Navigator.pushReplacementNamed(context, '/home');
           },
+
         ),
       ),
     );
