@@ -7,6 +7,7 @@ import './product_manager/product_manager.dart';
 // Home Page Widget
 class HomePage extends StatelessWidget{
 
+  // Global State passing
   final List<Map> products;
   final Function addProduct;
   final Function deleteProduct;

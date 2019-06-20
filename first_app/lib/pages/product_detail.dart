@@ -1,6 +1,72 @@
 // Basic Material App Package
 import 'package:flutter/material.dart';
 
+_showWarningDialog(BuildContext context) {
+
+// Check again if user want to delete
+return showDialog(context: context,
+
+  // Prompt Dialog
+  builder: (BuildContext context) {return AlertDialog(
+    
+    // Dialog Title
+    title: Text('Are You Sure?'),
+
+    // Dialog Text
+    content: Text('A deleted item cannot be restored...'),
+
+    // Dialog Options
+    actions: <Widget>[
+
+      // Button 1 - discarding
+      FlatButton(
+
+        // Button 1 text
+        child: Text('CANCEL'),
+
+        // Button 1 action
+        onPressed: () {
+
+          // Close dialog
+          Navigator.pop(context);
+
+        },
+
+        // Styling Colors
+        textColor: Theme.of(context).accentColor,
+        color: Theme.of(context).accentColor.withOpacity(.2),
+
+      ),
+
+      // Button 2 - deleting
+      FlatButton(
+
+        // Button 2 text
+        child: Text('DELETE'),
+
+        // Button 2 action
+        onPressed: () {
+
+          // Close Dialog
+          Navigator.pop(context);
+
+          // Delete the item
+          Navigator.pop(context, true);
+
+        },
+
+        // Styling Colors
+        textColor: Theme.of(context).primaryColor,
+
+      ),
+
+    ],
+
+  );},
+
+);
+}
+
 // Product Page Generator
 class ProductPage extends StatelessWidget{
   
@@ -36,7 +102,7 @@ class ProductPage extends StatelessWidget{
         color: Theme.of(context).accentColor,
 
         // Button Action
-        onPressed: () => Navigator.pop(context, true),
+        onPressed: () => _showWarningDialog(context),
 
         // padding for button
       ), padding: EdgeInsets.all(10.0),),

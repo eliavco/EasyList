@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 
 // Product Create And List Import
-import './product_manager/products.dart';
 import './product_create.dart';
 import './product_list.dart';
 
@@ -79,7 +78,11 @@ class AdminPage extends StatelessWidget{
 
       // Page Content
       body: TabBarView(children: <Widget>[
+
+        // First tab content
         ProductCreatePage(),
+
+        // Second tab content
         ProductListPage(),
       ],),
       

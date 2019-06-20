@@ -109,8 +109,8 @@ class _MyAppState extends State<MyApp> {
           // Index Retrieving
           final int index = int.parse(pathElements[2]);
 
-          // Prodct Detail Page Returning
-          return MaterialPageRoute(
+          // Prodct Detail Page Returning <bool> is important
+          return MaterialPageRoute<bool>(
             builder: (BuildContext context) => ProductPage(
               products[index]['title'], products[index]['imageUrl']
             )
@@ -124,7 +124,13 @@ class _MyAppState extends State<MyApp> {
       },
 
       // 404 & unknown route
-        // onUnknownRoute: ,
+      onUnknownRoute: (RouteSettings settings) {
+
+        // Returning home page as fallback
+        return MaterialPageRoute(
+          builder: (BuildContext context) => HomePage(products, addProduct, deleteProduct)
+        );
+      },
 
     );
   }

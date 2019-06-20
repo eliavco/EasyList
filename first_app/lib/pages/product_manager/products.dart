@@ -1,9 +1,6 @@
 // Basic Material App Package
 import 'package:flutter/material.dart';
 
-// Import Product detail page
-import './../product_detail.dart';
-
 // Leading Image
 Widget leadingImage(imgUrl){
   return Container(
@@ -55,15 +52,10 @@ class Products extends StatelessWidget {
               color: Colors.white30,
 
               // Details button action
-              onPressed: () => Navigator.push<bool>(
-                context,
-                MaterialPageRoute(
-                  builder: (BuildContext context) => ProductPage(
-                    products[index]['title'], products[index]['imageUrl']
-                  )
-                )
-              ).then((bool value){
+              onPressed: () => Navigator.pushNamed<bool>(context,'/product/${index.toString()}').then((bool value){
                 if(value){
+
+                  // Delete Product
                   deleteProduct(index);
                 }
               })

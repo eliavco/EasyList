@@ -10,7 +10,33 @@ class ProductCreatePage extends StatelessWidget {
     
     // Create Product
     return Center(
-      child: Text('Create a Product'),
+
+      // Button for prompting modal
+      child: RaisedButton(
+
+        // Text on Button for prompting modal
+        child: Text('Create a Product! Save!'),
+
+        // Button for prompting modal action
+        onPressed: () {
+
+          // Open a modal
+          showModalBottomSheet(context: context,
+
+            // Modal content
+            builder: (BuildContext context) {
+              
+              // Modal Content
+              return Center(
+
+                // Modal title
+                child: Text('Create a Product!'),
+              );
+            }
+          );
+        },
+      )
     );
   }
+
 }
