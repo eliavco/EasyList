@@ -88,8 +88,8 @@ class _MyAppState extends State<MyApp> {
 
       // Navigation & static routes
       routes: {
-        '/home': (BuildContext context) => HomePage(products, addProduct, deleteProduct),
-        '/admin': (BuildContext context) => AdminPage(),
+        '/home': (BuildContext context) => HomePage(products,),
+        '/admin': (BuildContext context) => AdminPage(addProduct, deleteProduct),
       },
 
       // Navigation & dynamic routes
@@ -112,7 +112,7 @@ class _MyAppState extends State<MyApp> {
           // Prodct Detail Page Returning <bool> is important
           return MaterialPageRoute<bool>(
             builder: (BuildContext context) => ProductPage(
-              products[index]['title'], products[index]['imageUrl']
+              products[index]['title'], products[index]['description'], products[index]['imageUrl'],
             )
           );
 
@@ -128,7 +128,7 @@ class _MyAppState extends State<MyApp> {
 
         // Returning home page as fallback
         return MaterialPageRoute(
-          builder: (BuildContext context) => HomePage(products, addProduct, deleteProduct)
+          builder: (BuildContext context) => HomePage(products),
         );
       },
 

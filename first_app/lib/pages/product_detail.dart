@@ -71,8 +71,9 @@ return showDialog(context: context,
 class ProductPage extends StatelessWidget{
   
   final String title;
+  final String description;
   final String imageUrl;
-  ProductPage(this.title, this.imageUrl);
+  ProductPage(this.title, this.description, this.imageUrl);
 
   // Product Detail Body Builder
   Widget bodyPage(BuildContext context, title, imageUrl){
@@ -88,7 +89,7 @@ class ProductPage extends StatelessWidget{
         padding: EdgeInsets.all(10.0),
 
         // Heading Content
-        child: Text(title),
+        child: Text(description),
 
       ),
 

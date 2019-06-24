@@ -7,6 +7,13 @@ import './product_list.dart';
 
 // Admin Page Widget
 class AdminPage extends StatelessWidget{
+
+  // Functions set up
+  final Function addProduct;
+  final Function deleteProduct;
+  AdminPage(this.addProduct, this.deleteProduct);
+
+  // Admin Page Generate
   @override
   Widget build(BuildContext context){
 
@@ -80,7 +87,7 @@ class AdminPage extends StatelessWidget{
       body: TabBarView(children: <Widget>[
 
         // First tab content
-        ProductCreatePage(),
+        ProductCreatePage(addProduct),
 
         // Second tab content
         ProductListPage(),

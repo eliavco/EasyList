@@ -9,9 +9,9 @@ class HomePage extends StatelessWidget{
 
   // Global State passing
   final List<Map> products;
-  final Function addProduct;
-  final Function deleteProduct;
-  HomePage(this.products, this.addProduct, this.deleteProduct);
+  // final Function addProduct;
+  // final Function deleteProduct;
+  HomePage(this.products, /* this.addProduct, this.deleteProduct */ );
 
   @override
   Widget build(BuildContext context){
@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget{
       ),
 
       // Page Content
-      body: ProductManager(products, addProduct, deleteProduct),
+      body: ProductManager(products, /* addProduct, deleteProduct */ ),
       
     );
   }

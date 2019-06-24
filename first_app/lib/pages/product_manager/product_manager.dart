@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 // Importing Cards Maker and button 
 import './products.dart';
-import './product_control.dart';
+// import './product_control.dart';
 
 // products list state
 class ProductManager extends StatelessWidget {
@@ -46,9 +46,9 @@ class _ProductManagerState extends State<ProductManager> {
 
   // Setting Up Important data
   final List<Map> products;
-  final Function addProduct;
-  final Function deleteProduct;
-  ProductManager(this.products, this.addProduct, this.deleteProduct);
+  // final Function addProduct;
+  // final Function deleteProduct;
+  ProductManager(this.products, /* this.addProduct, this.deleteProduct */ );
 
   // products page builder
   @override
@@ -57,7 +57,7 @@ class _ProductManagerState extends State<ProductManager> {
     // products page layout
     return Column(children: [
 
-    // 'add item' button  
+    /*// 'add item' button  
     Container(
 
       // button content
@@ -66,10 +66,10 @@ class _ProductManagerState extends State<ProductManager> {
       // margin to the button
       margin: EdgeInsets.all(10),
 
-    ),
+    ),*/
 
     // Products list
-    Expanded(child: SizedBox(height: 500.0, child: Products(products, deleteProduct: deleteProduct,),),),
+    Expanded(child: SizedBox(height: 500.0, child: Products(products, /* deleteProduct: deleteProduct, */ ),),),
 
     ],);
   }
