@@ -1,6 +1,9 @@
 // Basic Material App Package
 import 'package:flutter/material.dart';
 
+// Colors Import
+// import './../../tools/colors.dart';
+
 // Leading Image
 Widget leadingImage(imgUrl){
   return Container(
@@ -24,8 +27,10 @@ class Products extends StatelessWidget {
 
     // Colors Helper
     List colorsList = [
-      Theme.of(context).primaryColorLight,
-      Theme.of(context).primaryColorDark,
+      // Color(0xFF70C1B3),
+      // Color(0xFFF3FFBD),
+      Theme.of(context).accentColor,
+      Theme.of(context).primaryColor,
     ];
 
     return Container(child: Card(

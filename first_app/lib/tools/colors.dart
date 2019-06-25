@@ -13,7 +13,7 @@ Map<int, Color> redColor =
   600:Color.fromRGBO(230, 57, 70, .7),
   700:Color.fromRGBO(230, 57, 70, .8),
   800:Color.fromRGBO(230, 57, 70, .9),
-  900:Color.fromRGBO(230, 57, 70, 1),
+  900:Color.fromRGBO(230, 57, 70,  1),
 };
 
 // Custom Primary Red Color
@@ -32,30 +32,30 @@ Map<int, Color> blueColor =
   600:Color.fromRGBO(168, 218, 220, .7),
   700:Color.fromRGBO(168, 218, 220, .8),
   800:Color.fromRGBO(168, 218, 220, .9),
-  900:Color.fromRGBO(168, 218, 220, 1),
+  900:Color.fromRGBO(168, 218, 220,  1),
 };
 
 // Custom Primary Blue Color
-MaterialColor blueColorCustom = MaterialColor(0xFFA8DADC, redColor);
+MaterialColor blueColorCustom = MaterialColor(0xFFA8DADC, blueColor);
 
 
 // Accent Yellow Color Swatch
 Map<int, Color> yellowColor =
 {
-  50 :Color.fromRGBO(168, 218, 220, .1),
-  100:Color.fromRGBO(168, 218, 220, .2),
-  200:Color.fromRGBO(168, 218, 220, .3),
-  300:Color.fromRGBO(168, 218, 220, .4),
-  400:Color.fromRGBO(168, 218, 220, .5),
-  500:Color.fromRGBO(168, 218, 220, .6),
-  600:Color.fromRGBO(168, 218, 220, .7),
-  700:Color.fromRGBO(168, 218, 220, .8),
-  800:Color.fromRGBO(168, 218, 220, .9),
-  900:Color.fromRGBO(168, 218, 220, 1),
+  50 :Color.fromRGBO(243, 255, 189, .1),
+  100:Color.fromRGBO(243, 255, 189, .2),
+  200:Color.fromRGBO(243, 255, 189, .3),
+  300:Color.fromRGBO(243, 255, 189, .4),
+  400:Color.fromRGBO(243, 255, 189, .5),
+  500:Color.fromRGBO(243, 255, 189, .6),
+  600:Color.fromRGBO(243, 255, 189, .7),
+  700:Color.fromRGBO(243, 255, 189, .8),
+  800:Color.fromRGBO(243, 255, 189, .9),
+  900:Color.fromRGBO(243, 255, 189,  1),
 };
 
 // Custom Primary Yellow Color
-MaterialColor yellowColorCustom = MaterialColor(0xFFA8DADC, yellowColor);
+MaterialColor yellowColorCustom = MaterialColor(0xFFF3FFBD, yellowColor);
 
 
 // Accent Green Color Swatch
@@ -70,7 +70,7 @@ Map<int, Color> greenColor =
   600:Color.fromRGBO(112, 193, 179, .7),
   700:Color.fromRGBO(112, 193, 179, .8),
   800:Color.fromRGBO(112, 193, 179, .9),
-  900:Color.fromRGBO(112, 193, 179, 1),
+  900:Color.fromRGBO(112, 193, 179,  1),
 };
 
 // Custom Primary Green Color

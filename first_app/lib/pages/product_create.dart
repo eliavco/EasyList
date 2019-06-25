@@ -184,6 +184,7 @@ class _ProductCreatePageState extends State<ProductCreatePage> {
 
           // Settings
           maxLines: 4,
+          minLines: 1,
 
           // Style
           decoration: InputDecoration(
