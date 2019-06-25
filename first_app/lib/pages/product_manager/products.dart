@@ -24,29 +24,67 @@ class Products extends StatelessWidget {
 
     // Colors Helper
     List colorsList = [
-      Theme.of(context).primaryColor.withOpacity(.2),
-      Theme.of(context).accentColor.withOpacity(.2),
+      Theme.of(context).primaryColorLight,
+      Theme.of(context).primaryColorDark,
     ];
 
     return Container(child: Card(
 
         // Backgrond Color
-        color: colorsList[products.indexOf(products[index])%2],
+        color: colorsList[products.indexOf(products[index])%2].withOpacity(.4),
 
         // Column of Parts of the item
         child: Column(children: <Widget>[
 
           // Leading Image
           leadingImage(products[index]['imageUrl']),
+
+          // Line
+          Container(
+            height: 3.0,
+            width: 300.0,
+            decoration: BoxDecoration(color: colorsList[ (products.indexOf(products[index])%2)==0 ? 1 : 0 ].withOpacity(.6) ),
+          ),
           
+          SizedBox(height: 15.0,),
+
           // Text Description
-          Text(products[index]['title']),
+          Text(products[index]['title'],
+
+            // Style
+            style: TextStyle(
+              
+              // Font Size
+              fontSize: 20.0,
+
+              // Color
+              color: Colors.black87,
+
+            ),
+      
+          ),
 
           // Actions Buttons
           ButtonBar(children: <Widget>[
 
             // Details button
-            FlatButton(child: Text('Details'),
+            FlatButton(
+              
+              // Button Text
+              child: Text('DETAILS',
+              
+                // Style
+                style: TextStyle(
+
+                  // Font Size
+                  fontSize: 14.0,
+
+                  // Color
+                  color: Colors.black87,
+
+                ),
+
+              ),
 
               // Button Color
               color: Colors.white30,

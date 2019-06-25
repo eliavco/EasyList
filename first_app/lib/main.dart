@@ -77,6 +77,8 @@ class _MyAppState extends State<MyApp> {
         // Colors
         primarySwatch: redColorCustom,
         accentColor: blueColorCustom,
+        primaryColorLight: greenColorCustom,
+        primaryColorDark: yellowColorCustom,
 
         // Fonts
         fontFamily: 'Google'
